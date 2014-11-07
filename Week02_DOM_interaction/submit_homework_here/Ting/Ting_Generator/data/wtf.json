@@ -1,0 +1,47 @@
+{
+	"people": [
+		"Ting",
+		"BirceOzkan",
+		"Boscott",
+		"Chan",
+		"Feng",
+		"Galit",
+		"Hang",
+		"Jimmy",
+		"Marta",
+		"Niamh",
+		"Nour",
+		"Shufei",
+		"ShuYu",
+		"Xiaoqi",
+		"Yu-chien"
+	],
+	"event01": [
+		"takes JavaScript Class",
+		"reads a book",
+		"drinks a cup of coffee",
+		"eats an orange",
+		"makes Arduino stuffs",
+		"works",
+		"walks the dog"
+	],
+	"location02": [
+		"at D12",
+		"in a park",
+		"in the rainforest",
+		"on the moon",
+		"In the Sahara Desert",
+		"on the Great Wall",
+		"in a pyramid",
+		"in the White House",
+		"on Mount Everest"
+	],
+	"time03": [
+		"in the morning",
+		"in the afternoon",
+		"at midnight",
+		"for a whole day"
+	],
+	"result": [
+	]
+}

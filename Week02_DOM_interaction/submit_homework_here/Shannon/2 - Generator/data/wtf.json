@@ -1,0 +1,99 @@
+{
+	"message": [
+		"Make a"
+	],
+	"thing": [
+		"mobile application",
+		"interactive website",
+		"installation",
+		"wearable device",
+		"documentary",
+		"animation",
+		"game",
+		"critical design",
+		"public intervention"
+	],
+	"domain1": [
+		"feminism",
+		"cross-cultural design",
+		"music",
+		"food",
+		"geography",
+		"finance",
+		"zoology",
+		"fashion",
+		"experience design",
+		"religion",
+		"fitness",
+		"futurism",
+		"sustainability"
+	],
+		"domain2": [
+		"hackivism",
+		"the body",
+		"education",
+		"experiential narrative",
+		"techno-pessimism",
+		"internet of things",
+		"parafunctionality",
+		"accessibility",
+		"psychology",
+		"anthropology",
+		"identity",
+		"advertising",
+		"data visualization"
+	],
+		"domain3": [
+		"quantified self",
+		"cartography",
+		"cannibas cultivation",
+		"bakery science",
+		"bowling management",
+		"comedy",
+		"puppetry",
+		"canadian studies",
+		"theme park design",
+		"children",
+		"piano pedagogy",
+		"blacksmithing",
+		"ecogastronomy"
+	],
+	"group": [
+		"millennials",
+		"third culture kids",
+		"reality TV stars",
+		"people aged 40 - 65",
+		"the elderly",
+		"crazy girlfriends",
+		"athletes",
+		"rappers",
+		"developers",
+		"crazy rich asians",
+		"CEOs",
+		"New Yorkers",
+		"conservative parents"
+	],
+		"constraint": [
+		"5 months",
+		"locality",
+		"100 dollars",
+		"Los Angeles only",
+		"1 dollar",
+		"3 months"
+	],
+		"issue": [
+		"global warming",
+		"obesity",
+		"income inequality",
+		"ebola",
+		"poverty",
+		"racism",
+		"gay rights",
+		"euthanasia",
+		"interracial relationships",
+		"immigration",
+		"pornography"
+	],
+	"result": [
+	]
+}

@@ -1,0 +1,15 @@
+/* your style begins here */
+body{
+	background-color: #FFFFCC;
+}
+#container {
+	margin: 0 auto;
+	width: 90%;
+	color:#9999FF;
+	font-size: 30px;
+	font-family: 'Gill Sans';
+
+	position: fixed;
+    top: 300px;
+    right: 50px;
+}

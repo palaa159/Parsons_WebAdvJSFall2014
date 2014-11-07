@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<meta charset="utf-8">
+
+	<title>Feed on Instagram</title>
+	
+	<meta name="description" content="Feed palnts with your instagram photos.">
+	
+
+
+	<link rel="stylesheet" type="text/css" media="screen" href="../src/css/style.css">
+	
+</head>
+
+	<body lang="en">
+	
+		<!-- Reference: Instagram Lite by Michael Lancaster http://michaelynch.com -->
+
+		<ul class="images"></ul>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		
+		<script src="../src/instagramLite.js"></script>
+		
+		<script>
+		
+			$('.images').instagramLite({
+				username: 'jimmy.tang',
+				clientID: '61e9d43427c04c719e3f150d75093a70',
+				urls: true,
+				error: function(errorCode, errorMessage) {
+				
+					console.log('There was an error');
+				
+					if(errorCode && errorMessage) {
+						alert(errorCode +': '+ errorMessage);
+					}
+				},
+				success: function() {
+					console.log('The request was successful!');
+				}
+			});
+		
+		</script>
+
+	</body>
+	
+</html>

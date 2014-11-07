@@ -1,0 +1,24 @@
+/* your style begins here */
+body{
+	background: #FF5594;
+}
+
+#container {
+	margin: 50px auto;
+	width: 70%;
+	text-align: center;
+}
+
+#display {
+	font-family: 'Dancing Script', cursive;
+	color: #fff;
+	/*display: inline;*/
+	font-size: 6em;
+	line-height: 1.1em;
+	margin-bottom: 100px;
+}
+
+a{
+	color: #fff;
+	font-size: 0.9em;
+}

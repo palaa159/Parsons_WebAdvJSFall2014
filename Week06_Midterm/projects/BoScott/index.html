@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>midterm</title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- <link href="css/main.css" rel="stylesheet" type="text/css" /> -->
+
+    
+    <!-- load jquery and jsrender libraries -->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jsrender.js"></script>
+
+    <!-- and new libraries to use lastfm -->
+    <script type="text/javascript" src="js/lastfm.api.md5.js"></script>
+    <script type="text/javascript" src="js/lastfm.api.js"></script>
+    <script type="text/javascript" src="js/lastfm.api.cache.js"></script>
+
+
+</head>
+<body>
+	<!-- Fixed header -->
+	<header>
+		<!-- all float elements -->
+		<div id="header-left"></div>
+		<div id="header-center"></div>
+		<div id="header-right"></div>
+		<!-- dummy menu -->
+	<div id="link">
+		<a href="#/topArtists" id="link1">Top</a>
+		<a href="#/fav" id="link2">Fav</a>
+		<a href="#/about" id="link3">About</a>
+	</div>
+
+	</header>
+	<footer>
+		<!-- for create overlayer -->
+<!-- 		<div id="btnCreate">Create</div> -->
+	</footer>
+	<!-- App View -->
+	<div id="view">
+
+
+	<script id="lastfmTemplateArtists" type="text/x-jsrender">
+        <div id="{{:mbid}}" class="artist">
+            <a href="{{:url}}" rel="nofollow" target="_blank"><img src="{{:image[2]["#text"]}}" alt="{{:name}}" /><b>{{:name}}:</b></a>
+        </div>
+    </script>
+
+
+    <script id="lastfmTemplateArtistInfo" type="text/x-jsrender">
+        <div class="artist_info" id="artist">
+
+            <a href="{{:url}}" rel="nofollow" target="_blank"><b id="name" class="top">{{:name}}</b><img src="{{:image[3]["#text"]}}" alt="{{:name}}" /></a><button id="liked" class="liked">♫</button>
+            <div><noindex>
+                {{:bio.content}}
+            </noindex></div>
+        </div>
+    </script>
+
+	<script id="lastfmTemplateArtistInfo2" type="text/x-jsrender">
+        <div class="artist_info" id="artist1">
+
+            <a href="{{:url}}" rel="nofollow" target="_blank"><b id="name1" class="top1">{{:name}}</b><img src="{{:image[3]["#text"]}}" alt="{{:name}}" /></a><button id="liked1" class="liked">♫</button>
+            <div><noindex>
+                {{:bio.content}}
+            </noindex></div>
+        </div>
+    </script>
+
+    <script id="lastfmTemplateArtistInfo3" type="text/x-jsrender">
+        <div class="artist_info" id="artist2">
+
+            <a href="{{:url}}" rel="nofollow" target="_blank"><b id="name2" class="top2">{{:name}}</b><img src="{{:image[3]["#text"]}}" alt="{{:name}}" /></a><button id="liked2" class="liked">♫</button>
+            <div><noindex>
+                {{:bio.content}}
+            </noindex></div>
+        </div>
+    </script>
+
+    <script id="lastfmTemplateArtistInfo4" type="text/x-jsrender">
+        <div class="artist_info" id="artist3">
+
+            <a href="{{:url}}" rel="nofollow" target="_blank"><b id="name3" class="top3">{{:name}}</b><img src="{{:image[3]["#text"]}}" alt="{{:name}}" /></a><button id="liked3" class="liked">♫</button>
+            <div><noindex>
+                {{:bio.content}}
+            </noindex></div>
+        </div>
+    </script>
+
+    <script id="lastfmTemplateArtistInfo5" type="text/x-jsrender">
+        <div class="artist_info" id="artist4">
+
+            <a href="{{:url}}" rel="nofollow" target="_blank"><b id="name4" class="top4">{{:name}}</b><img src="{{:image[3]["#text"]}}" alt="{{:name}}" /></a><button id="liked4" class="liked">♫</button>
+            <div><noindex>
+                {{:bio.content}}
+            </noindex></div>
+        </div>
+    </script>
+
+    <script id="lastfmTemplateArtistInfo6" type="text/x-jsrender">
+        <div class="artist_info" id="artist5">
+
+            <a href="{{:url}}" rel="nofollow" target="_blank"><b id="name5" class="top5">{{:name}}</b><img src="{{:image[3]["#text"]}}" alt="{{:name}}" /></a><button id="liked5" class="liked">♫</button>
+            <div><noindex>
+                {{:bio.content}}
+            </noindex></div>
+        </div>
+    </script>
+
+
+
+    <script id="lastfmTemplateTracks" type="text/x-jsrender">
+        {{if image}}
+        <div id="{{:mbid}}" class="track">
+            <a href="{{:url}}" rel="nofollow" target="_blank"><img src="{{:image[0]["#text"]}}" /><b>{{:name}}:</b></a>
+        </div>
+        {{/if}}
+    </script>
+
+	<!-- Underscore templating -->
+	<!-- Template for in-progress page -->
+	<script type="text/template" id="tpl-inProgress">
+
+
+
+		<div class="page <%= transition %>" id="p-inProgress">
+
+
+		<!-- ///////////////  TAG //////////////// -->
+
+    <div class="genreContainer">
+        <form class="setGenre">
+            <input type="text" class="genre" placeholder="Genre...">
+            <input type="submit" id="submit">
+        </form>
+        
+    </div>
+
+<!-- //////////////////////////////////// -->
+
+		<div class="content-main">
+
+		<div class="content-body">
+            <h2>Top artist</h2>
+            <div class="content-body-inner" id="top_artist"></div>
+        </div>
+        <div class="content-body">
+            <h2>2nd</h2>
+            <div class="content-body-inner" id="top_artist2"></div>
+        </div>
+        <div class="content-body">
+            <h2>3rd</h2>
+            <div class="content-body-inner" id="top_artist3"></div>
+        </div>
+        <div class="content-body">
+            <h2>4th</h2>
+            <div class="content-body-inner" id="top_artist4"></div>
+        </div>
+        <div class="content-body">
+            <h2>5th</h2>
+            <div class="content-body-inner" id="top_artist5"></div>
+        </div>
+        <div class="content-body">
+            <h2>6th</h2>
+            <div class="content-body-inner" id="top_artist6"></div>
+        </div>
+        <!--<div class="content-body">
+            <h2>Top artists</h2>
+            <div class="content-body-inner" id="top_artists"></div>
+        </div> -->
+
+        <div class="content-body">
+            <h2>Top tracks</h2>
+            <div class="content-body-inner" id="top_tracks"></div>
+        </div>
+
+        <div class="favContainer"></div>
+        <div class="favContainer1"></div>
+        <div class="favContainer2"></div>
+        <div class="favContainer3"></div>
+        <div class="favContainer4"></div>
+        <div class="favContainer5"></div>
+	</div>
+    </div>
+</script>
+	</script>
+	
+
+	<!-- ////////// TEST ////////////// -->
+<!-- 		<div class="content-main">
+        <div class="content-body">
+            <h2>Top artists</h2>
+            <div class="content-body-inner" id="top_artists"></div>
+        </div>
+        <div class="content-body">
+            <h2>Top artist</h2>
+            <div class="content-body-inner" id="top_artist"></div>
+        </div>
+        <div class="content-body">
+            <h2>Top tracks</h2>
+            <div class="content-body-inner" id="top_tracks"></div>
+        </div>
+	</div> -->
+
+	<!-- <script id="lastfmTemplateFav" type="text/x-jsrender">
+            <a href="{{:url}}" rel="nofollow" target="_blank"><b>{{:name}}:</b></a><span class="fav">♡</span>
+    </script> -->
+
+    <!-- ////////////////////////////// -->
+
+	<!-- Template for done page -->
+	<script type="text/template" id="tpl-done">
+		<div class="page <%= transition %>" id="p-done">
+			
+			<div class="favContainer"></div>
+        <div class="favContainer1"></div>
+        <div class="favContainer2"></div>
+        <div class="favContainer3"></div>
+        <div class="favContainer4"></div>
+        <div class="favContainer5"></div>
+
+			<!-- <div class="content-main">
+        		<div class="content-body">
+            <h2>Top artist</h2>
+            <div class="content-body-inner" id="top_artist"></div>
+        </div>
+        </div> -->
+            <!-- <h2></h2> -->
+			<!-- <p>is a list of past activities.</p> -->
+		</div>
+	</script>
+
+
+
+
+	<!-- Template for about page -->
+	<script type="text/template" id="tpl-about">
+		<div class="page <%= transition %>" id="p-about">
+		<!-- <div class="content-main">
+        <div class="content-body">
+            <h2>Top tracks</h2>
+            <div class="content-body-inner" id="top_tracks"></div>
+        </div>
+		</div> -->
+	</script>
+
+
+
+
+	<!-- Template for create overlayer -->
+	<!-- <script type="text/template" id="tpl-create">
+		<div class="overlayer <%= transition %>" id="o-create">
+			<h3>Create new project</h3>
+			<button id="btnOverlayerClose">close</button>
+		</div>
+	</script> -->
+
+	<!-- Loading Scripts -->
+	<!-- 
+	<script type="text/javascript" src="phonegap.js"></script>
+	-->
+	<!-- Loading libraries -->
+	<script type="text/javascript" src="js/fastclick.min.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+
+	<!-- Loading our scripts -->
+	<script type="text/javascript" src="js/pages.js"></script>
+	<script type="text/javascript" src="js/router.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

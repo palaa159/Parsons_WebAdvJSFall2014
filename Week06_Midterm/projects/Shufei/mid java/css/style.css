@@ -1,0 +1,84 @@
+body {
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+/* panel menu */
+.menu {
+  background: black ;
+  left: -150px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 150px;
+}
+
+/* Basic styling */
+
+.jumbotron {
+  background-image: url('http://karellephotographyblog.com/upload/2011/01/houston_texas_dog_photographer_karelles_kanines/animals1.jpg'); 
+
+  height: 800px;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+       
+}
+
+.menu ul {
+  border-top: 1px ;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li:hover {
+  background-color: #3F445E;
+  border-bottom: 1px ;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+
+.menu a {
+  padding-left: 25px;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.icon-menu {
+  color: #fff;
+  float:left;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}
+
+.navbar-form {
+  /*position:absolute;*/
+  float:right;
+  padding-top:0px;
+
+}

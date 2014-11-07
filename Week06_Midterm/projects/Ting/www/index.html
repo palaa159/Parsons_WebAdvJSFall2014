@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TingApp</title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<!-- Fixed header -->
+	<header>
+		<!-- all float elements -->
+		<div id="header-left"></div>
+		<div id="header-center"></div>
+		<div id="header-right"></div>
+		<!-- dummy menu -->
+		<a href="#/inProgress"><c class="p1">City&nbsp;</c></a>
+		<a href="#/done"><c class="p1">Rose&nbsp;</c></a>
+		<a href="#/about"><c class="p1">Portrait</c></a>
+		<!--comment begin -->
+		<div id="app">
+		<div class="appTitle">ALL COMMENTS</div>
+		<hr>
+		<div id="itemsContainer">
+		</div>
+
+		<div id="inputContainer">
+			<input type="text" id="itemInput" placeholder="comments">
+			<button id="itemAddBtn">Add</button>
+		</div>
+		</div>
+		<!--comment end -->
+	</header>
+	<footer>
+		<!-- for create overlayer -->
+		<div id="btnCreate">About Ting</div>
+	</footer>
+	<!-- App View -->
+	<div id="view">
+	</div>
+
+	<!-- Underscore templating -->
+	<!-- Template for in-progress page -->
+	<script type="text/template" id="tpl-inProgress">
+		<div class="page <%= transition %>" id="p-inProgress">
+			<h1><font face="Bodoni BT" size="72" color="#fff">City</font></h1>
+			<% _.each(dummy, function(item) { %>
+				<li><a href="#/<%= item %>"><%= item %></a></li>
+			<% }); %>
+		</div>
+	</script>
+	<!-- Template for done page -->
+	<script type="text/template" id="tpl-done">
+		<div class="page <%= transition %>" id="p-done">
+			<h1><font face="Bodoni BT" size="72" color="#fff">Rose</font></h1>
+			<% _.each(dummy, function(item) { %>
+				<li><a href="#/<%= item %>"><%= item %></a></li>
+			<% }); %>
+		</div>
+	</script>
+	<!-- Template for about page -->
+	<script type="text/template" id="tpl-about">
+		<div class="page <%= transition %>" id="p-about">
+			<h1><font face="Bodoni BT" size="72" color="#fff">Portrait</font></h1>
+			<% _.each(dummy, function(item) { %>
+				<li><a href="#/<%= item %>"><%= item %></a></li>
+			<% }); %>
+		</div>
+	</script>
+
+	<!-- Template for mashami page -->
+	<script type="text/template" id="tpl-mashami">
+		<div class="page <%= transition %>" id="p-mashami">
+			<h1><font face="Bodoni BT" size="72" color="#fff">Mashami</font></h1>
+			<% _.each(dummy, function(item) { %>
+				<li><a href="#/<%= item %>"><%= item %></a></li>
+			<% }); %>
+		</div>
+	</script>
+
+	<!-- Template for create overlayer -->
+	<script type="text/template" id="tpl-create">
+		<div class="overlayer <%= transition %>" id="o-create">
+			<h3>Create new project</h3>
+			<button id="btnOverlayerClose">close</button>
+		</div>
+	</script>
+
+	<!-- Loading Scripts -->
+	 
+	<script type="text/javascript" src="phonegap.js"></script>
+	
+	<!-- Loading libraries -->
+	<script type="text/javascript" src="js/fastclick.min.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+
+	<!-- Loading our scripts -->
+	<script type="text/javascript" src="js/pages.js"></script>
+	<script type="text/javascript" src="js/router.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</body>
+</html>

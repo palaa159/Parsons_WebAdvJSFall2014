@@ -1,0 +1,66 @@
+/* your SASS style begins here */
+body {
+  background: #c9c9c9;
+}
+
+#app {
+  width: 760px;
+  margin: 0 auto;
+  color: black;
+  font-weight: 100;
+}
+
+.appTitle {
+  text-align: center;
+  font-size: 3em;
+}
+
+#itemsContainer {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 25px;
+}
+
+.item .itemTitle {
+  margin: 0 15px 0 15px;
+}
+.item .itemFavorite {
+  color: #d9d9d9;
+  cursor: pointer;
+  /*margin-right: 15px;*/
+}
+.item .itemFavorite:hover {
+  color: #b3a1d9;
+}
+.item .itemDelete {
+  color: #d9d9d9;
+  cursor: pointer;
+  position: relative;
+  top: -3px;
+  /*margin-left: 15px;*/
+}
+
+#inputContainer {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 1.5em;
+}
+#inputContainer #itemInput, #inputContainer #itemInput:focus {
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0px 5px 0px 5px;
+  height: 30px;
+}
+#inputContainer #itemAddBtn {
+  margin-left: -6px;
+  border: 0;
+  background: #b3a1d9;
+  color: #fff;
+  font-size: 0.8em;
+  height: 30px;
+  padding: 0px 15px 0px 15px;
+  vertical-align: top;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

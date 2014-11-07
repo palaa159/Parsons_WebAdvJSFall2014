@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600" rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Fixed header -->
+	<header>
+		<!-- all float elements -->
+		<a class="menu" href="#/mood">MOOD</a>
+		<a class="menu" href="#/story">STORY</a>
+		<a class="menu" href="#/home">HOME</a>
+	</header>
+
+	<!-- App View -->
+	<div id="view">
+
+	</div>	
+
+	<!-- Underscore templating -->
+	<!-- Template for home page -->
+	<script type="text/template" id="tpl-home">
+		<div class="page <%= transition %>" id="p-home">
+			<h1>Today, my story is ...</h1>
+			<div id="itemsContainer"></div>
+			<hr width="50%">
+			
+			<div id="inputContainer">
+			<textarea type="text" id="itemInput" placeholder="Type your story..."></textarea>
+			<br>
+			<p>My story is </p>
+			<button id="red" class="red">happy</button>
+			<button id="blue" class="blue">sad</button>
+			<button id="green" class="green">peaceful</button>
+			<br><br>
+			<button id="itemAddBtn" class="save">SAVE</button>
+
+			</div>
+
+		</div>
+	</script>
+	<!-- Template for story page -->
+	<script type="text/template" id="tpl-story">
+		<div class="page <%= transition %>" id="p-story">
+			<h1>My Story</h1>
+			<p>It is a list of past stories.</p>
+			<div id="back">
+			<% _.each(dummy, function(item) { %>
+				<ul><p href="#/<%= item %>"><%= item %></p></ul>
+			<% }); %>
+			</div>
+
+		</div>
+	</script>
+	<!-- Template for mood page -->
+	<script type="text/template" id="tpl-mood">
+		<div class="page <%= transition %>" id="p-mood">
+			<h1>My Mood</h1>
+			<div class="moodBoard">
+			<% _.each(dummy, function(item) { %>
+				<div class="square <%= item %>" href="#/<%= item %>"></div>
+			<% }); %>
+			</div>
+		</div>
+	</script>
+
+
+	<!-- Loading Scripts -->
+	<!-- 
+	<script type="text/javascript" src="phonegap.js"></script>
+	-->
+	<!-- Loading libraries -->
+	<script type="text/javascript"src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fastclick.min.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	
+
+	<!-- Loading our scripts -->
+	<!--<script type="text/javascript" src="js/type2.js"></script>-->
+	<script type="text/javascript" src="js/pages.js"></script>
+	<script type="text/javascript" src="js/router.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

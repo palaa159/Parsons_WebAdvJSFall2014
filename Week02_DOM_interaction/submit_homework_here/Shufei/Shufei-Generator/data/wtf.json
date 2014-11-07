@@ -1,0 +1,55 @@
+{
+	"message": [
+		"I don't know why ",
+		"I hate to say this, but ",
+		"Luckly, ",
+		"Eventhough I don't like it, but ",
+		"I'm so exciting that ",
+		"I can't wait that "
+	],
+	"day": [
+		"on Monday",
+		"on Tuesday",
+		"on Thursday",
+		"on Wendsday",
+		"on Friday",
+		"on Saturday",
+		"on Sunday",
+		"everyday"
+	],
+	"food": [
+		"I will eat pasta ",
+		"I will eat Sushi ",
+		"I will eat Ootoya ",
+		"I will eat Saigon Shack ",
+		"I will eat Vapiano ",
+		"I will eat KFC ",
+		"I will eat Shake Shack ",
+		"I will eat pizza ",
+		"I will eat Indian food ",
+		"I will eat Chinese food ",
+		"I will eat junk food ",
+		"I will eat barbecue ",
+		"I will eat Miss Korean "
+	],
+	"friend": [
+		"with Marta!",
+		"with Dylan!",
+		"with Feng yuan!",
+		"with Winnnie!",
+		"with Apon!",
+		"with Kevin!",
+		"with Jimmy!",
+		"with Ting!",
+		"with Xiaoqi!",
+		"with Susan!",
+		"with Crystal!",
+		"with Shannon!",
+		"with Niamh!",
+		"with Lucy!",
+		"with Birce!",
+		"with Hang!"
+	],
+	"result": [
+	]
+}

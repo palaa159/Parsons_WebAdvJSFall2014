@@ -1,0 +1,51 @@
+{
+	"people": [
+		"A MEN",
+		"A WOMEN",
+		"AN OLD MEN",
+		"A CHILD",
+		"A CAT",
+		"A BABY"
+	],
+	"doaction": [
+		"WALKS",
+		"FLYS",
+		"JUMPS",
+		"SLEEPS",
+		"CLIMBS",
+		"DRUNK",
+		"SWIMS",
+		"LAUGHS",
+		"IS FALLING",
+		"SINGS",
+		"RUNS"
+	],
+	"inlocation": [
+		"ON THE SKY",
+		"UNDER THE SEA",
+		"IN A BATHROOM",
+		"IN THE FOREST",
+		"IN THE JUNGLE",
+		"INTO NOWHERE",
+		"IN A BAR",
+		"IN A SUBWAY",
+		"ON THE ROOFTOP",
+		"ON A ELEPHANT",
+		"IN THE MOON",
+		"IN CLOUDS",
+		"IN THE WORLD OF THE BOOK"
+	],
+	"intimes": [
+		"WITH A BLACK CAT FALLOWS",
+		"WITH A LITTLE SNAKE",
+		"WITH A DANCING MONKEY",
+		"AND THERE IS A MONSTER BEHIND",
+		"AND A BIRD IS SINGING",
+		"WITH A GIFT",
+		"WITH A BEAUTIFUL MYSTERY",
+		"NOW",
+		"AND PLAYS WITH A DOLPHIN"
+	],
+	"result": [
+	]
+}

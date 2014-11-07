@@ -1,0 +1,36 @@
+{
+	"people": [
+		"MY FATHER",
+		"A CAT",
+		"A DOGGY",
+		"HER FARIEND",
+		"THAT MAN",
+		"THIS STUDENT",
+	],
+	"verb": [
+		"RUNS",
+		"EATS",
+		"WALKS",
+		"WRITES",
+		"LAUGHS",
+		"JUMPS",
+	],
+	"where": [
+		"IN A CLASSROOM",
+		"IN THE PLAYGROUND",
+		"IN D12",
+		"UNDER THE DESK",
+		"ON RUNWAY",
+		"IN THE WIRE"
+	],
+	"propose": [
+		"TO DINK COFFEE.",
+		"TO SING A SONG.",
+		"TO BE HAPPY.",
+		"TO GET HIGH.",
+		"TO PLAY WITH YOU.",
+		"TO FIND A MONSTER."
+	],
+	"result": [
+	]
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<!-- Fixed header -->
+	<header>
+	<ul class="nav">
+		<li><a href="#/catNote">NOTES</a></li>
+		<li><a href="#/explore">EXPLORE</a></li>
+	</ul>
+	</header>
+	<footer>
+		<!-- for create overlayer -->
+		<div id="btnCreate">CREATE</div>
+	</footer>
+	<!-- App View -->
+	<div id="view">
+	</div>
+
+	<!-- Underscore templating -->
+	<!-- Template for cat-progress page -->
+	<script type="text/template" id="tpl-catNote">
+		<div class="page <%= transition %>" id="p-catNote">
+			<h1>NOTES FOR YOUR CAT</h1>
+            <div id="itemsContainer">
+            	<% _.each(items, function(item) { %>
+            		<li><%= item.item %></li>
+            	<% }); %>
+            </div>           
+		</div>
+	</script>
+
+	<!-- Template for explore page -->
+	<script type="text/template" id="tpl-explore">
+		<div class="page <%= transition %>" id="p-explore">		
+		</div>
+	</script>
+
+	<!-- Template for giphy page -->
+	<script type="text/template" id = "tpl-giphy">
+		<h1>EXPLORE</h1>
+		<% _.each(data, function(item) { %>
+			<div class="item-gif">
+				<img data-fullscreen="false" data-id="<%= item.id %>" src="<%= item.images.fixed_width.url %>">
+			</div>
+		<% }); %>
+	</script>
+
+
+	<!-- Template for create overlayer -->
+	<script type="text/template" id="tpl-create">
+		<div class="overlayer <%= transition %>" id="o-create">
+			<h3>CREATE A NOTE FOR YOUR CAT</h3>
+			<div id="inputContainer">
+				<input type="text" id="itemInput" placeholder="ADD A NEW NOTE HERE.">
+				<button id="itemAddBtn">ADD</button>
+			</div>
+			<button id="btnOverlayerClose">CLOSE</button>
+		</div>
+	</script>
+	
+	<!-- Loading Scripts -->
+	<!-- 
+	<script type="text/javascript" src="phonegap.js"></script>
+	-->
+	<!-- Loading libraries -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fastclick.min.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<!-- <script type="text/javascript" src="js/zepto.min.js"></script>-->
+	
+
+	<!-- Loading our scripts -->
+	<script type="text/javascript" src="js/note.js"></script>
+	<script type="text/javascript" src="js/pages.js"></script>
+	<script type="text/javascript" src="js/router.js"></script>
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

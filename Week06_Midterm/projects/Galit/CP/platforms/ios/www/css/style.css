@@ -1,0 +1,79 @@
+/* your SASS style begins here */
+body {
+  background: #fcfdf8;
+}
+
+#app {
+  width: 480px;
+  margin: 0 auto;
+  color: black;
+  font-weight: 100;
+}
+
+.appTitle {
+  padding: 75px 0;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #fcfdf8;
+  margin: 0 auto;
+  background-image: url("/img/cp.jpg");
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  font-size: 1em;
+  transition: 0.25s;
+  position: fixed;
+  bottom: 0px;
+  z-index: 1;
+  width: 480px;
+  text-align: center;
+  margin: 0 auto;
+}
+footer div {
+  background: #79be4a;
+  opacity: 0.90;
+  color: #fcfdf8;
+  padding: 16px 0px 0px 0px;
+  float: left;
+  width: 33%;
+  height: 28px;
+  font-weight: 100;
+  border-left: 1px solid #fcfdf8;
+}
+footer div:first-child {
+  border-right: none;
+}
+
+#itemsContainer {
+  width: 480px;
+  text-align: left;
+  font-size: 1em;
+  margin: 8px auto 44px auto;
+  padding: 0px 4px;
+}
+
+.item {
+  font-size: 1em;
+  margin-bottom: 4px;
+  border-bottom: #79be4a 1px solid;
+  padding: 8px 0;
+  width: 472px;
+}
+.item .itemTitle {
+  padding: 8px 4px;
+}
+.item .itemDelete {
+  color: #d9d9d9;
+  cursor: pointer;
+  position: relative;
+  top: -3px;
+}
+.item .myImage {
+  width: 472px;
+  height: auto;
+  padding: 8px 0;
+  margin: 0 auto;
+}

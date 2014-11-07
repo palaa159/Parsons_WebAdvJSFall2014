@@ -1,0 +1,145 @@
+/* your SASS style begins here */
+body {
+  
+  background-image:url('back.png');
+ /* background: linear-gradient(rgba(255,0,0,0.5), rgba(255,255,0,0.5));
+  */
+}
+
+hr  {
+  color: white;
+background-color: white;
+height: 1px;
+border-style: solid;
+width: 270px;
+text-align: left;
+margin-left:50px; 
+
+}
+
+#app {
+  width: 100%;
+  height:800px;
+ /* margin: 0 auto;*/
+  color: white;
+  font-family: verdana;
+  font-weight: 100;
+}
+#app #kgTolb{
+
+  border-style: solid;
+  position: absolute;
+  border-color: white;
+  border-width: 2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 20px;
+  padding: 7px 15px 7px 15px;
+
+}
+
+.appTitle {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 2em;
+  padding-left:50px; 
+}
+
+.myWeight {
+  /*font-family: helvetica;*/
+ 
+  color:white;
+  font-size:150px;
+
+ /* text-align: center;
+  margin-left: 200px;*/
+
+}
+#itemsContainer {
+  width:300px;
+  height: 500px;
+
+  float: left;
+  text-align: left;
+  font-size: 1.5 em;
+  color:white;
+  margin: 50px 0px 0px 0px;
+  padding: 30px 0px 50px 40px;
+  
+  /*background-color: green;*/
+}
+
+#itemsContainer #myDate{
+  color:green;
+}
+.item .itemTitle {
+  padding: 50px 50px 0px 10px;
+}
+.item .itemFavorite {
+  color: #d9d9d9;
+  cursor: pointer;
+}
+.item .itemDelete {
+  color: yellow;
+  cursor: pointer;
+  position: relative;
+  top: -2px;
+}
+
+#inputContainer {
+  width:450px;
+  float:right;
+  margin-top: 175px;
+  margin-left: 400px;
+  text-align: center;
+  font-size: 1.5em;
+  padding-left:50px; 
+  position: absolute;
+}
+
+
+#inputContainer #itemInput, #inputContainer #itemInput:focus {
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0px 15px 0px 15px;
+  height: 25px;
+  font-size:0.7em;
+  /*border-top-left-radius: 10px;*/
+  /*border-bottom-left-radius: 10px;*/
+  color: #86d5d9;
+  width: 200px;
+  font-weight: 30;
+}
+#inputContainer #itemAddBtn {
+  /*margin-left: -6px;*/
+  border: 2;
+  border-color: white;
+  border-style: solid;
+  outline: 0;
+  margin: 20;
+  background: none;
+  color: #fff;
+  font-size: 0.7em;
+  margin-top: 20px;
+  height: 30px;
+  padding: 2px 30px 15px 30px;
+  vertical-align: top;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#inputContainer #itemAddBtn:focus {
+  outline: none;
+}
+
+.fav {
+  color: #b3a1d9 !important;
+}

@@ -1,0 +1,171 @@
+console.log('Hello World');
+
+console.warn('This is final warning');
+
+console.info('Some information');
+
+var myString = "this is a string";
+var myOtherString = 'this is also count as string';
+
+console.log(myString);
+console.log(myOtherString);
+
+
+//concat
+
+var myFirstString = " I am";
+var mySecondString = " Birce";
+
+//join 2+ strings
+//var 
+
+var joinedString = myFirstString + mySecondString;
+console.log(joinedString);
+
+//another way of joining 2+ strings with.concat
+var joinedString = myFirstString.concat(mySecondString);
+console.log(joinedString);
+
+
+///number
+
+//integer data type
+
+var myInt= '383434343434';
+var myFinalInt= parseInt(myInt, 10);
+console.log(myInt);
+console.log(myFinalInt);
+
+//escape a quote
+var someString = 'I\' am a burger';
+console.log(someString);
+
+var myvaar = 2;
+var myfloat = 0.765;
+var text = "123";
+
+int myint = 1;
+float myfloat = 9.0;
+
+//Array
+//it is a moving box
+// it contains a collection of items (could be any data)
+
+var myArray = [1, 'Hamcheese', 0.889, ['Hey']];
+
+var myArray = [ 1, 2, 3];
+console.log(myArray[0]);
+
+console.log('Printing: ' + myArray[0] + ' and' + myArray[1]);
+console.log('length of the array is: ' + myArray.length);
+
+var emptyArray = [];
+
+emptyArray.push('item 01');
+console.log(emptyArray);
+emptyArray.push('item 01');
+emptyArray.push('item 02');
+emptyArray.push(12345);
+emptyArray.push(['also an array']);
+
+
+
+emptyArray.splice(0, 1); //removinf with index
+console.log(emptyArray);
+
+var indexToRemove = emptyArray.indexOf('item 02');
+console.log(indexToRemove);
+
+//removing item 02
+emptyArray.splice(indexToRemove, 1);
+console.log(emptyArray);
+
+//object
+
+//name: Birce;
+//Age; 25;
+//origin: jshdjdd;
+
+// var myObject = {};
+// myObject.name = 'Birce';
+// myObject.age = '25';
+// myObject.origin = 'jjdjhj';
+
+// console.log(myObject);
+
+// console.log(myObject.name);
+// myObject.name = 'Birce';
+// console.log(myObject.name);
+
+
+var myOtherObject = {
+	name: 'Birce',
+	age:'25',
+	origin:'djdfjdjf'
+};
+
+// for(var i =  0; i < 10, i++) 
+// {
+//	console.log('number:' + i);
+// }
+
+// for (var i = 0; i < 10; i++) {
+//console.log('number:' + i ):
+// }
+
+var superheroes = ['Batman', 'Superman', 'Spiderman'];
+
+console.log(superheroes[0]);
+console.log(superheroes[1]);
+console.log(superheroes[2]);
+
+for (var k = 0; k < superheroes.length; k++) {
+	console.log(superheroes[k] + ' is dead.');
+}
+
+
+//////functions
+
+var myFunction = function() {
+	console.log('I am a function');
+};
+
+
+myFunction();
+var myOtherFunction = function(msg) {
+	console.log(msg);
+};
+
+myOtherFunction('Hello Universe');
+
+
+var c = function(msg) {
+	console.info(msg);
+};
+
+c('print something now!');
+
+// create an object
+
+var Human = function (name, color, weight, height) {
+	// head, body, color, weight, height
+	this.name = name;
+	this.color = color;
+	this.weight = weight;
+	this.height = height;
+	/// add functions
+	this.walk = function() {
+		console.log(this.name + ' is walking');
+
+	};
+};
+
+ var firstHuman = new Human('Birce','Purple', 43, 234);
+ var secondHuman = new Human('Ceyda', 'Pink', 55, 134);
+
+
+ console.log(firstHuman);
+ console.log(secondHuman);
+
+secondHuman.walk();
+

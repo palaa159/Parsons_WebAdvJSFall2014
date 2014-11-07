@@ -1,0 +1,61 @@
+{
+	"message": [
+		"chardonnay",
+		"creamed spinach with bacon",
+		"shredded zuchinni and squash noodles",
+		"nothing",
+		"butermilk toast",
+		"mashed sweet potatoes"
+	],
+	"problem": [
+		"tomatoes",
+		"love",
+		"brussle sprouts",
+		"mozzerella",
+		"lemon",
+		"olives",
+		"feta",
+		"fontina cheese",
+		"kale",
+		"artichokes",
+		"proscitto",
+		"olive oil",
+		"balsamic vinegar"
+	],
+	"user": [
+		"shredded chicken",
+		"seared halibut",
+		"pineapple carnitas",
+		"poached egg",
+		"bbq duck",
+		"steamed tofu",
+		"filet mignon",
+		"stuffed pork chops",
+		"pan-fried scallops"
+	],
+	"medium": [
+		"wearable",
+		"website",
+		"app",
+		"critical design",
+		"smartwatch",
+		"installation",
+		"interative book",
+		"field emission display",
+		"arduinoed shoes",
+		"augmented reality",
+		"virtual reality",
+		"unity game",
+		"board game",
+		"toy",
+		"sweat sensor",
+		"sort of openframework stuff",
+		"flying drone",
+		"headphones",
+		"wristband",
+		"arduinoed baseball bat",
+		"LED-lit underwear"
+	],
+	"result": [
+	]
+}

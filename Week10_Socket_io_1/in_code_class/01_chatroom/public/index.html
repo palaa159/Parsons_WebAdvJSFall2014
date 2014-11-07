@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div id="app">
+		<div id="main">
+			<div id="col-members">
+			</div>
+			<div id="col-chatlog">
+			</div>
+		</div>
+
+		<div id="server-message">
+			<span>::</span>
+			<span id="output"></span>
+		</div>
+		<div id="input">
+			<input type="text" placeholder="chat?" id="input-msg">
+			<input type="submit" id="submit">
+		</div>
+	</div>
+
+	<!-- ADD THIS LIBRARY FOR SOCKET.IO -->
+	<script src="/socket.io/socket.io.js"></script>
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

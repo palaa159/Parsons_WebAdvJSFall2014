@@ -1,0 +1,131 @@
+/* your SASS style begins here */
+
+$background: #FCFDF8;
+$textbright: #FCFDF8;
+
+
+$footer: #79BE4A;
+
+body {
+	background: $background;
+}
+
+#app {
+	width: 480px;
+	margin: 0 auto;
+	color: rgba(0,0,0,1);
+	font-weight: 100;
+}
+
+.appTitle {
+	padding: 75px 0;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 400;
+	color: $textbright;
+	margin: 0 auto;
+	background-image: url('/img/cp.jpg');
+	max-width:100%;
+	height:auto;
+}
+
+footer {
+	font-size: 1em;
+	transition: 0.25s;
+	position: fixed;
+	bottom: 0px;
+	z-index: 1;
+	width: 480px;
+	// height: 44px;
+	text-align: center;
+	margin: 0 auto;
+	div {
+		background: $footer;
+		opacity: 0.90;
+		color: $textbright;
+		padding: 16px 0px 0px 0px;
+		float:left;
+		width: 33%;
+		height: 28px;
+		font-weight: 100;
+		border-left: 1px solid $textbright;
+	}
+	div:first-child {
+		border-right: none;
+	}
+
+	// .selected {
+	// 	color: $red;
+	// 	opacity: 1 !important;
+	// 	// border-left: 2px solid $red;
+	// }
+}
+
+#itemsContainer {
+	width: 480px;
+	text-align: left;
+	font-size: 1em;
+	margin: 8px auto 44px auto;
+	padding: 0px 4px;
+}
+
+.item {
+	font-size: 1em;
+	margin-bottom: 4px;
+	border-bottom: $footer 1px solid;
+	padding: 8px 0;
+	width: 472px;
+	.itemTitle {
+		padding: 8px 4px;
+	}
+	.itemDelete {
+		color: #d9d9d9;
+		cursor: pointer;
+		position: relative;
+		top: -3px;
+	}
+	.myImage{
+		width:472px;
+		height: auto;
+		padding: 8px 0;
+		margin: 0 auto;
+	}
+}
+
+// #inputContainer {
+// 	margin-top: 25px;
+// 	text-align: center;
+// 	font-size: 1.5em;
+// 	#itemInput, #itemInput:focus {
+// 		border: 0;
+// 		outline: 0;
+// 		margin: 0;
+// 		padding: 0px 5px 0px 10px;
+// 		height: 30px;
+// 		border-top-left-radius: 10px;
+// 		border-bottom-left-radius: 10px;
+// 		color: #86d5d9;
+// 		width: 200px;
+// 		font-weight: 100;
+// 	}
+// 	#itemAddBtn {
+// 		margin-left: -6px;
+// 		border: 0;
+// 		background: $fav;
+// 		color: #fff;
+// 		font-size: 0.8em;
+// 		height: 30px;
+// 		padding: 0px 15px 0px 15px;
+// 		vertical-align: top;
+// 		border-top-right-radius: 10px;
+// 		border-bottom-right-radius: 10px;
+// 	}
+// 	#itemAddBtn:focus {
+// 		outline: none;
+// 	}
+// }
+
+
+// #myImage{
+// 	padding-bottom: 24px;
+// }

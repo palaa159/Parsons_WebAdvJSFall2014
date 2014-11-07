@@ -1,0 +1,35 @@
+/* your style begins here */
+
+#container {
+/*	background: #fff;*/
+	margin: 0 auto;
+	width: 80%;
+}
+
+#display {
+	background: rgba(255,255,255,0.8);
+	color: #FF3385;
+	text-align: center;
+	display: inline;
+	font-size: 5em;
+	line-height: 1.4em;
+	font-family: "Arial Rounded MT Bold", sans serif;
+
+}
+
+.msg {
+	color: #000;
+	font-size: 0.5em;
+	text-align: center;
+	font-family: "Avenir", sans serif;
+}
+
+body{
+
+	background-image:url(http://www.bfacemag.es/wp-content/uploads/2014/08/summer-cocktails.jpg);
+	
+/*	background-size: 100%;*/
+
+}
+
+/*http://www.creativedrinks.com.au/wp-content/uploads/2013/11/497642_cocktails_koktejli_moxito_pina_5500x3667_www.GdeFon.ru_.jpg*/

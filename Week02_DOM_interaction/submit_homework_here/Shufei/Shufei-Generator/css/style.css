@@ -1,0 +1,37 @@
+/* your style begins here */
+
+#container {
+	background: #fff;
+	margin: 0 auto;
+	width: 90%;
+}
+
+#display01 {
+	
+	color: #FBC935;
+	display: inline;
+	font-size: 6em;
+	line-height: 1.2em;
+}
+
+#display02 {
+	
+	color: #F0563D;
+	display: inline;
+	font-size: 6em;
+	line-height: 1.2em;
+}
+#display03 {
+	
+	color: #B7C11E;
+	display: inline;
+	font-size: 6em;
+	line-height: 1.2em;
+}
+#display04 {
+	
+	color: #2E313D;
+	display: inline;
+	font-size: 6em;
+	line-height: 1.2em;
+}

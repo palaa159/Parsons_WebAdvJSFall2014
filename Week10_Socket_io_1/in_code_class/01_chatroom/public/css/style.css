@@ -1,0 +1,69 @@
+/* your style begins here */
+
+* {
+	box-sizing: border-box;
+}
+
+#app {
+
+}
+
+#main {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #d6d0d0;
+}
+
+#main #col-members {
+	float: left;
+	width: 30%;
+	height: 100%;
+	background: #e8e8e8;
+	padding: 10px;
+}
+
+#main #col-chatlog {
+	float: right;
+	width: 70%;
+	height: 100%;
+	padding: 10px;
+}
+
+/* for message */
+.chat-log {
+	margin-bottom: 10px;
+}
+
+.small {
+	float: right;
+	font-size: 0.3em;
+}
+
+/* server message */
+#server-message {
+	position: fixed;
+	bottom: 45px;
+	width: 100%;
+	height: 20px;
+	background: #8f8f8f;
+	padding: 3px 15px;
+	font-size: 0.7em;
+	color: #fff;
+}
+
+/* for input */
+
+#input {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 45px;
+	padding: 10px 15px;
+	border-top: 1px solid #f1f1f1;
+	background: #e8dfe0;
+}
+
+#input #input-msg {
+	width: 75%;
+}

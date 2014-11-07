@@ -1,0 +1,88 @@
+/* your SASS style begins here */
+
+$background: rgba(201,201,201,1);
+$fav: rgba(179,161,217,1);
+
+body {
+	background: $background;
+}
+
+#app {
+	width: 480px;
+	margin: 0 auto;
+	color: rgba(0,0,0,1);
+	font-weight: 100;
+}
+
+.appTitle {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 2em;
+	font-weight: 100;
+}
+
+#itemsContainer {
+	text-align: left;
+	font-size: 2em;
+	margin: 25px 0px 0px 15px;
+	padding: 0px 0px 15px 0px;
+}
+
+.item {
+	font-size: 0.85em;
+	margin-bottom: 5px;
+	background-color: rgba(0, 0, 0, .5);
+	color: #fff;
+	.itemTitle {
+		padding: 0px 10px 0px 10px;
+	}
+	.itemFavorite {
+		color: #d9d9d9;
+		cursor: pointer;
+	}
+	.itemDelete {
+		// color: #d9d9d9;
+		color: rgb(200, 0, 0);
+		cursor: pointer;
+		position: relative;
+		top: -3px;
+	}
+}
+
+#inputContainer {
+	margin-top: 25px;
+	text-align: center;
+	font-size: 1.5em;
+	#itemInput, #itemInput:focus {
+		border: 0;
+		outline: 0;
+		margin: 0;
+		padding: 0px 5px 0px 10px;
+		height: 30px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		color: #86d5d9;
+		width: 200px;
+		font-weight: 100;
+	}
+	#itemAddBtn {
+		margin-left: -6px;
+		border: 0;
+		background: $fav;
+		color: #fff;
+		font-size: 0.8em;
+		height: 30px;
+		padding: 0px 15px 0px 15px;
+		vertical-align: top;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	#itemAddBtn:focus {
+		outline: none;
+	}
+}
+
+.fav {
+	color: $fav !important;
+	font-weight: 400;
+}

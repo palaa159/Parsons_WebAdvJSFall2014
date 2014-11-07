@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Fixed header -->
+	<header>
+		<!-- all float elements -->
+		<div id="header-left"></div>
+		<div id="header-center"></div>
+		<div id="header-right"></div>
+		<!-- dummy menu -->
+		<a href="#/inProgress">In-Progress</a>
+		<a href="#/done">Done</a>
+		<a href="#/about">About</a>
+	</header>
+	<footer>
+		<!-- for create overlayer -->
+		<div id="btnCreate">Create</div>
+	</footer>
+	<!-- App View -->
+	<div id="view">
+	</div>
+
+	<!-- Underscore templating -->
+	<!-- Template for in-progress page -->
+	<script type="text/template" id="tpl-inProgress">
+		<div class="page <%= transition %>" id="p-inProgress">
+			<h1>In Progress</h1>
+			<% _.each(dummy, function(item) { %>
+				<li><a href="#/<%= item %>"><%= item %></a></li>
+			<% }); %>
+		</div>
+	</script>
+	<!-- Template for done page -->
+	<script type="text/template" id="tpl-done">
+		<div class="page <%= transition %>" id="p-done">
+			<h1>Done</h1>
+			<p>is a list of past activities.</p>
+		</div>
+	</script>
+	<!-- Template for about page -->
+	<script type="text/template" id="tpl-about">
+		<div class="page <%= transition %>" id="p-about">
+			<h1>About</h1>
+			<p>
+			Lorem ipsum Elit adipisicing Duis occaecat dolor ad ullamco enim dolore qui dolor exercitation officia est in in dolore Ut adipisicing proident anim consectetur qui do consequat nostrud eu ex exercitation mollit.
+			</p>
+		</div>
+	</script>
+	<!-- Template for create overlayer -->
+	<script type="text/template" id="tpl-create">
+		<div class="overlayer <%= transition %>" id="o-create">
+			<h3>Create new project</h3>
+			<button id="btnOverlayerClose">close</button>
+		</div>
+	</script>
+
+	<!-- Loading Scripts -->
+	<!-- 
+	<script type="text/javascript" src="phonegap.js"></script>
+	-->
+	<!-- Loading libraries -->
+	<script type="text/javascript" src="js/fastclick.min.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+
+	<!-- Loading our scripts -->
+	<script type="text/javascript" src="js/pages.js"></script>
+	<script type="text/javascript" src="js/router.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

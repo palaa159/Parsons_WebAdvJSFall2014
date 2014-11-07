@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- Fixed header -->
+	<header>
+		<!--  
+			– List menu icon
+			– Page title
+		-->
+		<span class="h-title"></span>
+	</header>
+	<!-- Footer -->
+	<footer>
+		<div id="tab-feed">&#9729; Feed</div>
+		<div id="tab-favorite">&#9733; Favorite</div>
+		<div id="tab-about">&#9822; About</div>
+	</footer>
+	<!-- App View -->
+	<div id="view">
+	</div>
+
+	<!-- Underscore templating -->
+	<!-- Template for page: Feed -->
+	<script type="text/template" id="tpl-feed">
+		<div class="page <%= transition %>" id="p-feed">
+		</div>
+	</script>
+
+	<!-- Template for page: Favorite -->
+	<script type="text/template" id="tpl-favorite">
+		<div class="page <%= transition %>" id="p-favorite">
+		</div>
+	</script>
+
+	<!-- Template for gif items container -->
+	<script type="text/template" id="tpl-feed-container">
+		<% _.each(data, function(item) { %>
+			<div class="item-gif">
+				<img data-fullscreen="false" data-id="<%= item.id %>" src="<%= item.images.fixed_height.url %>">
+				<div class="item-fav">&#9733;</div>
+			</div>
+		<% }); %>
+	</script>
+
+	<!-- Loading Scripts -->
+	<!-- 
+	<script type="text/javascript" src="phonegap.js"></script>
+	-->
+	<!-- Loading libraries -->
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+
+	<!-- Loading our scripts -->
+	<script type="text/javascript" src="js/pages.js"></script>
+	<script type="text/javascript" src="js/router.js"></script>
+	<script type="text/javascript" src="js/api.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+$grey: #bdbdbd;
+$red: #ce4f7f;
+$green: #a8e67f;
+$blue: #a8cddd;
+
+$footer: #fbfbfb;
+
+* {
+	box-sizing: border-box;
+	-webkit-overflow-scrolling: touch;
+}
+
+body {
+	overflow: hidden;
+}
+
+// header sits on top of view
+header {
+	position: absolute;
+	top:0;
+	z-index: 1;
+	padding: 10px 0px 0px 20px;
+}
+
+footer {
+	transition: 0.25s;
+	position: absolute;
+	bottom: 0px;
+	z-index: 1;
+	width: 100%;
+	height: 37px;
+	text-align: center;
+	div {
+		background: $footer;
+		opacity: 0.95;
+		color: $grey;
+		padding: 8px 0px 0px 0px;
+		float:left;
+		width: 33.33%;
+		height: 100%;
+		font-weight: 100;
+		border-left: 1px solid $grey;
+	}
+	div:first-child {
+		border-right: none;
+	}
+	.selected {
+		color: $red;
+		opacity: 1 !important;
+		// border-left: 2px solid $red;
+	}
+}
+
+
+
+// makes app full screen
+#view {
+	position: absolute;
+	z-index: 0;
+	top:0;
+	bottom:0;
+	width: 100%;
+	height: 100%;
+}
+
+.page, .full-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: $grey;
+	transform: translate3d(0, 0, 0);
+	transition: 0.35s;
+	padding: 0px 0px 0px 0px;
+	overflow-y: scroll;
+}
+
+#p-feed {
+	img {
+		// margin-top: -5px !important;
+		width: 100%;
+		height: 100%;
+	}
+	.item-gif {
+		transition: 0.25s;
+		position: relative;
+		float: left;
+		width: 50%;
+		height: 150px;
+		overflow: hidden;
+		// opacity: 0.55;
+	}
+	.item-fav {
+		position: absolute;
+		right: 10px;
+		bottom: 0px;
+		z-index: 9;
+		font-size: 1.5em;
+		color: rgba(255,255,255,0.5);
+		transition: 0.25s;
+	}
+	.selected {
+		color: $red;
+		// font-size: 2em;
+		opacity: 1 !important;
+	}
+}
+
+// BLOW UPS
+.blow-parent {
+	position: absolute !important;
+	z-index: 999 !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.blow-gif {
+}
+
+// Transition trick
+// http://www.w3schools.com/css/css3_3dtransforms.asp
+.slideDown {
+	transform: translate(0%, 100%) !important;
+}
+
+.slideIn {
+	transform: translate3d(100%, 0%, 0);
+}
+
+.slideOut {
+	transform: translate3d(-30%, 0%, 0);
+	transition: 1s all;
+	opacity: 0.5;
+}
+
+.slideInFromBottom {
+	transform: translate3d(0, 100%, 0);
+}

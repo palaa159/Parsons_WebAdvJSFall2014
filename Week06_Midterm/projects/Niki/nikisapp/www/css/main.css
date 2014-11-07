@@ -1,0 +1,144 @@
+.outer {
+  border-collapse: collapse;
+  font: 12px/16px arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+div.outer {
+  border-top: solid 1px #ddd;
+  border-left: solid 1px #ddd;
+}
+
+div.outer p {
+  clear: left;
+}
+
+.outer td, .outer th {
+  border: solid 1px #ddd;
+  margin: 0;
+  padding: 5px;
+}
+
+.outer div {
+  border-right: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+  float: left;
+  margin: 0;
+  padding: 5px;
+}
+
+.outer th, .outer div.th {
+  background: #eee;
+  font-weight: bold;
+}
+
+.outer div:nth-child(odd) {
+  width: 20px;
+}
+
+.outer div:nth-child(even) {
+  width: 50px;
+}
+
+.outer div:nth-child(2n+1) {
+  clear: left;
+}
+
+.highlight {
+  background-color: #ffffff;
+}
+
+header {
+  width: 30%;
+  padding-left: 80px;
+  padding-right: 80px;
+  background-color: #ffffff;
+  position: absolute;
+  /* position in the center of the screen */
+  left: 20%;
+  display: inline-block;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+.gif-container {
+  float: right;
+}
+
+.heart {
+  color: white;
+  position: absolute;
+  /* position in the center of the screen */
+  left: 57%;
+  top: 3%;
+  /*right:20%;*/
+  bottom: 10%;
+  height: 90%;
+  /* text area height */
+  width: 30%;
+  /* text area width */
+  font-size: 400%;
+}
+
+.fav {
+  text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+}
+
+.fav:hover {
+  text-shadow: 4px 6px 10px #cc3399, 1px -1px 10px #cc3399, 1px -1px 10px #cc3399;
+}
+
+footer, .starter-template:after {
+  position: absolute;
+  /* position in the center of the screen */
+  left: 27%;
+  display: inline-block;
+  margin-bottom: 1px;
+  text-align: center;
+  transition: 0.25s;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+  width: 33%;
+  height: 37px;
+  text-align: center;
+}
+footer div, .starter-template:after div {
+  background: #fbfbfb;
+  opacity: 0.95;
+  color: #bdbdbd;
+  padding: 8px 0px 0px 0px;
+  float: left;
+  width: 30%;
+  height: 100%;
+  font-weight: 100;
+  border-left: 1px solid #bdbdbd;
+}
+footer div:first-child, .starter-template:after div:first-child {
+  border-right: none;
+}
+footer .selected, .starter-template:after .selected {
+  color: #ce4f7f;
+  opacity: 1 !important;
+}
+
+.starter-template:after {
+  content: "";
+  display: block;
+  padding-bottom: 100px;
+}
+
+.sticky, .starter-template:after {
+  height: 100px;
+  background-image: url("afooter.png");
+  filter: alpha(opacity=70);
+  background-repeat: repeat;
+  height: 100px;
+  border-radius: 10px;
+  margin-top: 50px;
+  width: 30%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}

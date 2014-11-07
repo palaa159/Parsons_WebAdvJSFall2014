@@ -1,0 +1,159 @@
+<!---
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+
+<h1 id="org-apache-cordova-device">org.apache.cordova.device</h1>
+<p>Ten plugin określa globalne <code>device</code> obiekt, który opisuje urządzenia sprzętowe i programowe. Mimo, że obiekt jest w globalnym zasięgu, nie jest dostępne dopiero po <code>deviceready</code> zdarzenie.</p>
+<pre><code>document.addEventListener(&quot;deviceready&quot;, onDeviceReady, false);
+function onDeviceReady() {
+    console.log(device.cordova);
+}
+</code></pre><h2 id="instalacji">Instalacji</h2>
+<pre><code>cordova plugin add org.apache.cordova.device
+</code></pre><h2 id="w-a-ciwo-ci">Właściwości</h2>
+<ul>
+<li>device.cordova</li>
+<li>device.model</li>
+<li>device.platform</li>
+<li>device.uuid</li>
+<li>device.version</li>
+</ul>
+<h2 id="device-cordova">device.cordova</h2>
+<p>Pobierz wersję Cordova działa na urządzeniu.</p>
+<h3 id="obs-ugiwane-platformy">Obsługiwane platformy</h3>
+<ul>
+<li>Amazon ogień OS</li>
+<li>Android</li>
+<li>Jeżyna 10</li>
+<li>Przeglądarka</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>Tizen</li>
+<li>Windows Phone 7 i 8</li>
+<li>Windows 8</li>
+</ul>
+<h2 id="device-model">device.model</h2>
+<p><code>device.model</code>Zwraca nazwę modelu lub produktu. Wartość jest zestaw przez producenta urządzenia i mogą się różnić między wersjami tego samego produktu.</p>
+<h3 id="obs-ugiwane-platformy">Obsługiwane platformy</h3>
+<ul>
+<li>Android</li>
+<li>Jeżyna 10</li>
+<li>Przeglądarka</li>
+<li>iOS</li>
+<li>Tizen</li>
+<li>Windows Phone 7 i 8</li>
+<li>Windows 8</li>
+</ul>
+<h3 id="szybki-przyk-ad">Szybki przykład</h3>
+<pre><code>// Android:    Nexus One       returns &quot;Passion&quot; (Nexus One code name)
+//             Motorola Droid  returns &quot;voles&quot;
+// BlackBerry: Torch 9800      returns &quot;9800&quot;
+// Browser:    Google Chrome   returns &quot;Chrome&quot;
+//             Safari          returns &quot;Safari&quot;
+// iOS:     for the iPad Mini, returns iPad2,5; iPhone 5 is iPhone 5,1. Zobacz http://theiphonewiki.com/wiki/index.php?title=Models / / modelu var = device.model;
+</code></pre><h3 id="android-dziwactwa">Android dziwactwa</h3>
+<ul>
+<li>Pobiera <a href="http://developer.android.com/reference/android/os/Build.html#PRODUCT">nazwę produktu</a> zamiast <a href="http://developer.android.com/reference/android/os/Build.html#MODEL">nazwy modelu</a>, który często jest nazwą kod produkcji. Na przykład, Nexus One zwraca <code>Passion</code> , i zwraca Motorola Droid<code>voles</code>.</li>
+</ul>
+<h3 id="osobliwo-ci-tizen">Osobliwości Tizen</h3>
+<ul>
+<li>Zwraca modelu urządzenia przypisane przez dostawcę, na przykład,<code>TIZEN</code></li>
+</ul>
+<h3 id="windows-phone-7-i-8-dziwactwa">Windows Phone 7 i 8 dziwactwa</h3>
+<ul>
+<li>Zwraca modelu urządzenia, określonej przez producenta. Na przykład Samsung ostrości zwraca<code>SGH-i917</code>.</li>
+</ul>
+<h2 id="device-platform">device.platform</h2>
+<p>Uzyskać nazwę systemu operacyjnego urządzenia.</p>
+<pre><code>var string = device.platform;
+</code></pre><h3 id="obs-ugiwane-platformy">Obsługiwane platformy</h3>
+<ul>
+<li>Android</li>
+<li>Jeżyna 10</li>
+<li>Browser4</li>
+<li>Firefox OS</li>
+<li>iOS</li>
+<li>Tizen</li>
+<li>Windows Phone 7 i 8</li>
+<li>Windows 8</li>
+</ul>
+<h3 id="szybki-przyk-ad">Szybki przykład</h3>
+<pre><code>// Depending on the device, a few examples are:
+//   - &quot;Android&quot;
+//   - &quot;BlackBerry 10&quot;
+//   - Browser:         returns &quot;MacIntel&quot; on Mac
+//                      returns &quot;Win32&quot; on Windows
+//   - &quot;iOS&quot;
+//   - &quot;WinCE&quot;
+//   - &quot;Tizen&quot;
+var devicePlatform = device.platform;
+</code></pre><h3 id="windows-phone-7-dziwactwa">Windows Phone 7 dziwactwa</h3>
+<p>Urządzenia Windows Phone 7 raport platformy jako<code>WinCE</code>.</p>
+<h3 id="windows-phone-8-dziwactwa">Windows Phone 8 dziwactwa</h3>
+<p>Urządzenia Windows Phone 8 raport platformy jako<code>Win32NT</code>.</p>
+<h2 id="device-uuid">device.uuid</h2>
+<p>Się urządzenia uniwersalnie unikatowy identyfikator (<a href="http://en.wikipedia.org/wiki/Universally_Unique_Identifier">UUID</a>).</p>
+<pre><code>var string = device.uuid;
+</code></pre><h3 id="opis">Opis</h3>
+<p>Szczegóły jak UUID jest generowane są określane przez producenta urządzenia i są specyficzne dla platformy lub modelu urządzenia.</p>
+<h3 id="obs-ugiwane-platformy">Obsługiwane platformy</h3>
+<ul>
+<li>Android</li>
+<li>Jeżyna 10</li>
+<li>iOS</li>
+<li>Tizen</li>
+<li>Windows Phone 7 i 8</li>
+<li>Windows 8</li>
+</ul>
+<h3 id="szybki-przyk-ad">Szybki przykład</h3>
+<pre><code>/ / Android: zwraca losowe 64-bitowa liczba całkowita (jako ciąg, znowu!) / / liczba całkowita jest generowany na pierwszego uruchomienia urządzenia / / / / BlackBerry: zwraca numer PIN urządzenia / / to jest unikatową liczbą całkowitą dziewięciu cyfr (jako ciąg, choć!) / / / / iPhone: (zacytowana w dokumentacji klasy UIDevice) / / zwraca ciąg wartości mieszania utworzone z wielu sprzętu identyfikuje.
+Zapewniona jest unikatowy dla każdego urządzenia i nie może być związane z / do konta użytkownika.
+/ / Windows Phone 7: zwraca wartość mieszania urządzenia + bieżący użytkownik, / / jeśli nie zdefiniowane przez użytkownika, identyfikator guid jest generowany i będzie trwać do czasu odinstalowania aplikacji / / Tizen: zwraca urządzenia IMEI (International Mobile Equipment Identity lub IMEI jest liczbą / / unikatowe dla każdego telefonu komórkowego GSM i UMTS.
+var deviceID = device.uuid;
+</code></pre><h3 id="ios-dziwactwo">iOS dziwactwo</h3>
+<p><code>uuid</code>Na iOS nie jest przypisany do urządzenia, ale różni się dla każdej aplikacji, dla każdej instalacji. Zmienia się jeśli możesz usunąć i ponownie zainstalować aplikację, a ewentualnie także po aktualizacji iOS czy nawet uaktualnienia aplikacji dla wersji (widoczny w iOS 5.1). <code>uuid</code>Jest nie wiarygodne wartości.</p>
+<h3 id="windows-phone-7-i-8-dziwactwa">Windows Phone 7 i 8 dziwactwa</h3>
+<p><code>uuid</code>Dla Windows Phone 7 wymaga uprawnień <code>ID_CAP_IDENTITY_DEVICE</code> . Microsoft będzie prawdopodobnie potępiać ten wkrótce. Jeśli funkcja nie jest dostępna, aplikacja generuje trwałe identyfikator guid, który jest utrzymywany przez czas trwania instalacji aplikacji na urządzeniu.</p>
+<h2 id="device-version">device.version</h2>
+<p>Pobierz wersję systemu operacyjnego.</p>
+<pre><code>var string = device.version;
+</code></pre><h3 id="obs-ugiwane-platformy">Obsługiwane platformy</h3>
+<ul>
+<li>Android 2.1 +</li>
+<li>Jeżyna 10</li>
+<li>Przeglądarka</li>
+<li>iOS</li>
+<li>Tizen</li>
+<li>Windows Phone 7 i 8</li>
+<li>Windows 8</li>
+</ul>
+<h3 id="szybki-przyk-ad">Szybki przykład</h3>
+<pre><code>// Android:    Froyo OS would return &quot;2.2&quot;
+//             Eclair OS would return &quot;2.1&quot;, &quot;2.0.1&quot;, or &quot;2.0&quot;
+//             Version can also return update level &quot;2.1-update1&quot;
+//
+// BlackBerry: Torch 9800 using OS 6.0 would return &quot;6.0.0.600&quot;
+//
+// Browser:    Returns version number for the browser
+//
+// iPhone:     iOS 3.2 returns &quot;3.2&quot;
+//
+// Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
+// Tizen: returns &quot;TIZEN_20120425_2&quot;
+var deviceVersion = device.version;
+</code></pre>

@@ -1,0 +1,1 @@
+var tizen=require("cordova/platform"),cordova=require("cordova");module.exports={getDeviceInfo:function(o){setTimeout(function(){o({cordova:tizen.cordovaVersion,platform:"tizen",model:null,version:null,uuid:null})},0)}},require("cordova/tizen/commandProxy").add("Device",module.exports);

@@ -1,0 +1,49 @@
+{
+	"message": [
+		"If you are feeling down today...",
+		"If you are in need of inspiration...",
+		"If procrastination is the only thing you have in mind...",
+		"If your computer just crashed...",
+		"Even if your code is still not working",
+		"If you just don't know what to do with your life..."
+	],
+	"drink": [
+		"Mojito with ",
+		"Sangria with ",
+		"Margarita with",
+		"Manhattan with",
+		"Tequila Sunrise with",
+		"Bloody Mary with",
+		"Cuba Libre with",
+		"Gin & Tonic with",
+		"Dry Martini with"
+	],
+	"alcohol": [
+		"100% sugar to",
+		"40% alcohol to",
+		"20 peaches to",
+		"a tone of salt to",
+		"the best view to",
+		"10 tomatoes to",
+		"30% rum to",
+		"some latin music to",
+		"more than 2 olives to",
+		"tone of mint to"
+		
+	],
+	"status": [
+		"get you drunk",
+		"set fireworks",
+		"spice some ideas",
+		"pass out",
+		"help you forget",
+		"make you dance",
+		"relax tour muscles",
+		"induce you to sleep",
+		"go crazy",
+		"jump around the room"
+		
+	],
+	"result": [
+	]
+}

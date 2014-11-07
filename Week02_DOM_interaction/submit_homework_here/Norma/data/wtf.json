@@ -1,0 +1,72 @@
+{
+	"message": [
+		"I don't give a f**k,",
+		"No f**kin clue but"
+	],
+	"gravy": [
+		"mushroom gravy",
+		"chocolate gravy",
+		"onion gravy",
+		"sausage gravy",
+		"egg gravy",
+		"vegetable gravy",
+		"cream gravy",
+		"brown gravy",
+		"buffalo ranch",
+		"sriracha",
+		"wasabi",
+		"butter chicken",
+		"curry",
+		"green curry",
+		"yellow mustard",
+		"chilli",
+		"sour cream"
+	],
+	"cheese": [
+		"blue cheese",
+		"cheese curds",
+		"mozzarella cheese",
+		"feta cheese",
+		"cheese strings"
+	],
+	"potato": [
+		"russet potato fries",
+		"red potato fries",
+		"white potato fries",
+		"purple potato fries",
+		"blue potato fries",
+		"fingerling potato fries",
+		"petite potato fries",
+		"sweet potato fries"
+	],
+	"descript": [
+		"Michelin star",
+		"five-star"
+	],
+	"topping": [
+		"bacon",
+		"caviar",
+		"waju beef",
+		"kimchi",
+		"bulgogi",
+		"natto",
+		"lobster",
+		"white truffle",
+		"salmon sashimi",
+		"falafel",
+		"cha siu",
+		"Montreal smoked meat",
+		"Italian meat sauce",
+		"jalapeño Peppers",
+		"sautéed Mushrooms",
+		"caramelized onions",
+		"chipotle pulled pork",
+		"Alaskan crab meat",
+		"perogies",
+		"crab cakes",
+		"stinky tofu",
+		"pad see ew"
+	],
+	"result": [
+	]
+}

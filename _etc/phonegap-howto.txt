@@ -1,0 +1,59 @@
+Phonegap/Cordova – How to
+========================
+Documentation
+http://docs.phonegap.com/en/3.5.0/index.html
+
+** You might encounter the term "Cordova" and "Phonegap" from time to time when you browse through the documentation. Bear in mind that Phonegap and Cordova are based the same open source project: Apache's Cordova, though Phonegap is a brand that Adobe created and with that they've added some useful tools to make your life easier. For example, Phonegap Build and Phonegap Developer app that you have downloaded last time.
+
+For iOS user:
+– Install Xcode + Xcode command-line tool
+For Android user:
+– Follow this link 
+http://docs.phonegap.com/en/3.5.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide
+
+========================
+Dependencies (Install with Terminal):
+1. Node.js 
+(http://nodejs.org/dist/v0.10.32/node-v0.10.32.pkg)
+2. Phonegap CLI
+3. ios-simulator
+4. ios-deploy
+	$ sudo npm install -g phonegap ios-sim ios-deploy
+5. Cordova CLI
+	$ sudo npm install -g cordova
+
+========================
+Create Phonegap App (with Terminal)
+1. In your working folder
+2. phonegap create <folder_name> <app_bundle_id> <app_name>
+	$ phonegap create goatVSZombie com.apon.goatvszombie GoatVSZombie
+3. cd to the folder (in my case, goatVSZombie)
+	$ cd goatVSZombie
+
+4. Add mandatory plugins
+	– Device: $ phonegap plugin add org.apache.cordova.device
+	this allows you to access phone's events.
+	or any plugins you may want to use
+	http://plugins.cordova.io/#/
+
+5. Add ios or Android platform
+	$ phonegap build ios –––> for iOS
+	$ phonegap build android –––> for Android
+
+6. Compile and emulate
+	$ phonegap run ios –––> for iOS
+	$ phonegap run android –––> for Android
+
+	If your phone is registered for apple developer and has provisioning profile installed, try plugging it to the computer. Phonegap will, instead of emulate, compile and push the app on your phone.
+
+	Same thing with Android, but no registration required.
+or 
+
+7. I'd recommend using Phonegap Developer (on App Store and Google Play)
+	$ phonegap serve
+	grab ip address and port and put it in the app. Note that your computer and your phone must be on the same wifi network.
+	One good thing about phonegap serve is that it watches for any changes in the folder and auto-refresh the result displaying on the app.
+
+** Please explore the folder www as it contains your code. Phonegap automatically initiate new project with default www folder for you to kickstart. Try hacking it.
+
+

@@ -1,0 +1,159 @@
+<!---
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+
+<h1 id="org-apache-cordova-device">org.apache.cordova.device</h1>
+<p>このプラグインをグローバル定義します <code>device</code> オブジェクトは、デバイスのハードウェアとソフトウェアについて説明します。 それは後まで利用可能なオブジェクトがグローバル スコープでは、 <code>deviceready</code> イベント。</p>
+<pre><code>document.addEventListener(&quot;deviceready&quot;, onDeviceReady, false);
+function onDeviceReady() {
+    console.log(device.cordova);
+}
+</code></pre><h2 id="-">インストール</h2>
+<pre><code>cordova plugin add org.apache.cordova.device
+</code></pre><h2 id="-">プロパティ</h2>
+<ul>
+<li>device.cordova</li>
+<li>device.model</li>
+<li>device.platform</li>
+<li>device.uuid</li>
+<li>device.version</li>
+</ul>
+<h2 id="device-cordova">device.cordova</h2>
+<p>デバイスで実行されているコルドバのバージョンを取得します。</p>
+<h3 id="-">サポートされているプラットフォーム</h3>
+<ul>
+<li>アマゾン火 OS</li>
+<li>アンドロイド</li>
+<li>ブラックベリー 10</li>
+<li>ブラウザー</li>
+<li>Firefox の OS</li>
+<li>iOS</li>
+<li>Tizen</li>
+<li>Windows Phone 7 と 8</li>
+<li>Windows 8</li>
+</ul>
+<h2 id="device-model">device.model</h2>
+<p><code>device.model</code>、デバイスのモデルまたは製品の名前を返します。値は、デバイスの製造元によって設定され、同じ製品のバージョン間で異なる可能性があります。</p>
+<h3 id="-">サポートされているプラットフォーム</h3>
+<ul>
+<li>アンドロイド</li>
+<li>ブラックベリー 10</li>
+<li>ブラウザー</li>
+<li>iOS</li>
+<li>Tizen</li>
+<li>Windows Phone 7 と 8</li>
+<li>Windows 8</li>
+</ul>
+<h3 id="-">簡単な例</h3>
+<pre><code>// Android:    Nexus One       returns &quot;Passion&quot; (Nexus One code name)
+//             Motorola Droid  returns &quot;voles&quot;
+// BlackBerry: Torch 9800      returns &quot;9800&quot;
+// Browser:    Google Chrome   returns &quot;Chrome&quot;
+//             Safari          returns &quot;Safari&quot;
+// iOS:     for the iPad Mini, returns iPad2,5; iPhone 5 is iPhone 5,1. Http://theiphonewiki.com/wiki/index.php?title=Models を参照してください//var モデル = device.model;
+</code></pre><h3 id="android-">Android の癖</h3>
+<ul>
+<li>生産コード名は<a href="http://developer.android.com/reference/android/os/Build.html#MODEL">モデル名</a>の代わりに<a href="http://developer.android.com/reference/android/os/Build.html#PRODUCT">製品名</a>を取得します。 たとえば、ネクサス 1 つを返します <code>Passion</code> 、Motorola のドロイドを返します<code>voles</code>.</li>
+</ul>
+<h3 id="tizen-">Tizen の癖</h3>
+<ul>
+<li>たとえば、ベンダーによって割り当てられているデバイスのモデルを返します<code>TIZEN</code></li>
+</ul>
+<h3 id="windows-phone-7-8-">Windows Phone 7 と 8 癖</h3>
+<ul>
+<li>製造元によって指定されたデバイスのモデルを返します。たとえば、三星フォーカスを返します<code>SGH-i917</code>.</li>
+</ul>
+<h2 id="device-platform">device.platform</h2>
+<p>デバイスのオペレーティング システム名を取得します。</p>
+<pre><code>var string = device.platform;
+</code></pre><h3 id="-">サポートされているプラットフォーム</h3>
+<ul>
+<li>アンドロイド</li>
+<li>ブラックベリー 10</li>
+<li>Browser4</li>
+<li>Firefox の OS</li>
+<li>iOS</li>
+<li>Tizen</li>
+<li>Windows Phone 7 と 8</li>
+<li>Windows 8</li>
+</ul>
+<h3 id="-">簡単な例</h3>
+<pre><code>// Depending on the device, a few examples are:
+//   - &quot;Android&quot;
+//   - &quot;BlackBerry 10&quot;
+//   - Browser:         returns &quot;MacIntel&quot; on Mac
+//                      returns &quot;Win32&quot; on Windows
+//   - &quot;iOS&quot;
+//   - &quot;WinCE&quot;
+//   - &quot;Tizen&quot;
+var devicePlatform = device.platform;
+</code></pre><h3 id="windows-phone-7-">Windows Phone 7 の癖</h3>
+<p>Windows Phone 7 デバイスとプラットフォームを報告します。<code>WinCE</code>.</p>
+<h3 id="windows-phone-8-">Windows Phone 8 癖</h3>
+<p>Windows Phone 8 デバイスとプラットフォームを報告します。<code>Win32NT</code>.</p>
+<h2 id="device-uuid">device.uuid</h2>
+<p>デバイスのユニバーサル ・ ユニーク識別子 (<a href="http://en.wikipedia.org/wiki/Universally_Unique_Identifier">UUID</a>を取得します。).</p>
+<pre><code>var string = device.uuid;
+</code></pre><h3 id="-">説明</h3>
+<p>UUID を生成する方法の詳細は、デバイスの製造元によって決定され、デバイスのプラットフォームやモデルに固有です。</p>
+<h3 id="-">サポートされているプラットフォーム</h3>
+<ul>
+<li>アンドロイド</li>
+<li>ブラックベリー 10</li>
+<li>iOS</li>
+<li>Tizen</li>
+<li>Windows Phone 7 と 8</li>
+<li>Windows 8</li>
+</ul>
+<h3 id="-">簡単な例</h3>
+<pre><code>//アンドロイド: ランダムな 64 ビットの整数 (を文字列として返します、再び ！）/デバイスの最初の起動時に生成される整数/////ブラックベリー: デバイスのピン番号を返します//これは 9 桁の一意な整数 (を文字列としても ！)////iPhone: (UIDevice クラスのドキュメントから言い換え）//識別複数のハードウェアから作成されたハッシュ値の文字列を返します。。
+//それはすべてのデバイスに対して一意であることが保証され、接続することはできません//ユーザー アカウント。
+//Windows Phone 7: デバイス + 現在のユーザーのハッシュを返します//ユーザーが定義されていない場合 guid が生成され、アプリがアンインストールされるまで保持されます//Tizen: デバイスの IMEI を返します （国際モバイル機器アイデンティティまたは IMEI は番号です//すべての GSM および UMTS の携帯電話に固有です。
+var deviceID = device.uuid;
+</code></pre><h3 id="ios-">iOS の気まぐれ</h3>
+<p><code>uuid</code>IOS で、デバイスに固有ではないインストールごと、アプリケーションごとに異なります。 削除、アプリを再インストールした場合に変更と多分またときアップグレード iOS の, またはもアップグレードするアプリ (iOS の 5.1 で明らかに） バージョンごと。 <code>uuid</code>は信頼性の高い値ではありません。</p>
+<h3 id="windows-phone-7-8-">Windows Phone 7 と 8 癖</h3>
+<p><code>uuid</code>のために Windows Phone 7 には、権限が必要です <code>ID_CAP_IDENTITY_DEVICE</code> 。 Microsoft はすぐにこのプロパティを廃止して可能性があります。 機能が利用できない場合、アプリケーションはデバイスへのアプリケーションのインストールの持続期間のために保持されている永続的な guid を生成します。</p>
+<h2 id="device-version">device.version</h2>
+<p>オペレーティング システムのバージョンを取得します。</p>
+<pre><code>var string = device.version;
+</code></pre><h3 id="-">サポートされているプラットフォーム</h3>
+<ul>
+<li>アンドロイド 2.1 +</li>
+<li>ブラックベリー 10</li>
+<li>ブラウザー</li>
+<li>iOS</li>
+<li>Tizen</li>
+<li>Windows Phone 7 と 8</li>
+<li>Windows 8</li>
+</ul>
+<h3 id="-">簡単な例</h3>
+<pre><code>// Android:    Froyo OS would return &quot;2.2&quot;
+//             Eclair OS would return &quot;2.1&quot;, &quot;2.0.1&quot;, or &quot;2.0&quot;
+//             Version can also return update level &quot;2.1-update1&quot;
+//
+// BlackBerry: Torch 9800 using OS 6.0 would return &quot;6.0.0.600&quot;
+//
+// Browser:    Returns version number for the browser
+//
+// iPhone:     iOS 3.2 returns &quot;3.2&quot;
+//
+// Windows Phone 7: returns current OS version number, ex. on Mango returns 7.10.7720
+// Tizen: returns &quot;TIZEN_20120425_2&quot;
+var deviceVersion = device.version;
+</code></pre>

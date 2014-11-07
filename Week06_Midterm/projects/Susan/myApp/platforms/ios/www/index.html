@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <div id="rectangle"></div>
+        <title>My Secret Gardan</title>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+      <header style="width: 640px;">
+
+          <span id="header-gardan" class="header-center" >Plant Diary</span>
+          <!-- <span id="header-plant" class="header-center" >My Plants</span> -->
+      
+      </header>
+    
+      <!-- App View -->
+      <div id="view"></div>
+
+
+ <!-- Underscore templating -->
+      <!-- Template for my gardan page -->
+      <script type="text/template" id="tpl-myGardan">
+      <div class="page <%= transition %>" id="p-myGardan">
+        <div id="menu">
+          
+          <p><i class="fa fa-leaf fa-1x"></i>Write A Diary For Your Plant<i class="fa fa-leaf fa-1x"></i></p>
+
+          <div id="itemsContainer">
+            <div id="display_pic" style="display:block;"></div>
+            
+          </div>
+          <hr>
+          <div id="btnAddPlant" class="addBtn" style="cursor: pointer;">Create</div>
+        </div>  
+      </div>
+    </script>
+
+  <!-- Template for my plant page -->
+    <script type="text/template" id="tpl-myItem">
+      <div class="page <%= transition %>" id="p-myItem">
+        <div id="menu">
+          <p>SO HAPPY</p>
+      </div>
+    </script>
+
+
+  <!-- Template for create addNewPlant overlayer -->
+    <script type="text/template" id="tpl-addNewPlant">
+      <div class="overlayer <%= transition %>" id="o-addPlant" style="font-family: "Avenir", Georgia, Serif;">
+        
+        <p style="font-size:18px;">
+          Add New Plant
+          <i id="btnOverlayerClose"class="fa fa-times fa-2x"></i>
+        </p>  
+        <div id="inputContainer">  
+          <form>
+            Name of plant:
+            <br> 
+            <input type="text" id="itemInput" name="nameOfPlant">
+          </form>
+          <br>
+          <div id="cameraBtn" onclick="capturePhoto();">
+              <i id="camera"class="fa fa-camera fa-5x" ></i>
+              <img style="display:none;width:50%;height:50%;" id="smallPrevImage" src="" />
+          </div>
+          <br>
+          <div class="addBtn" id="itemAddBtn">Add</div>
+        </div>  
+      </div>
+    </script>
+
+    <!-- Template for create addNewDiary overlayer -->
+    <script type="text/template" id="tpl-addNewDiary">
+      <div class="overlayer <%= transition %>" id="o-addDiary">
+        <h3>Add New Diary</h3>
+        
+        <form action="demo_form.asp">
+          The date you start: 
+          <input type="date" name="day">
+          <input type="submit" vaule="submit">
+        </form>
+
+        <form action="demo_form.asp" method="get">
+          How much you water: 
+          <input type="range" name="points" min="0" max="10">
+          <input type="submit" vaule="send">
+        </form>
+          
+        
+        <button id="btnOverlayerClose2">Cancel</button>
+
+      </div>
+    </script>
+<!-- Loading libraries -->
+
+    <script type="text/javascript" src="js/cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.min.js"></script>
+    <script type="text/javascript" src="js/underscore.js"></script>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+
+<!-- Loading our scripts -->
+    <script type="text/javascript" src="js/pages.js"></script>
+    <script type="text/javascript" src="js/router.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/cameraTest.js"></script>
+
+
+    </body>
+</html>

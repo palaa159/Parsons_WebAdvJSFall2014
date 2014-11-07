@@ -1,0 +1,58 @@
+{
+	"message": [
+		"I'm not gonna complain, I'm gonna make myself a glass of",
+		"I'm gonna make this sick punch for my house party:",
+		"I don't give a f**k, so I'm making",
+		"It's 2 weeks before finals and I'm drinking...",
+		"I just got dumped so I am drinking some",
+		"All I could find in my house to drink is some"
+	],
+	"liquor": [
+		"gin",
+		"Jack Daniels",
+		"tequila",
+		"ouzo",
+		"Jägermeister",
+		"red wine",
+		"Four Loco",
+		"champagne",
+		"absinthe",
+		"vodka",
+		"pepper whiskey"
+	],
+	"mixer": [
+		"Tecate",
+		"tears of regret",
+		"cranberry juice",
+		"pineapple juice",
+		"soda water",
+		"Creme de Violette",
+		"Coke",
+		"fresh squeezed orange juice",
+		"blood of my enemies",
+		"coconut juice",
+		"Mr. Pibb",
+		"ginger beer",
+		"a shot of rye",
+		"lime juice and triple sec",
+		"maricheno cherry juice"
+	],
+	"garnish": [
+		"muddled grapes",
+		"egg whites",
+		"champagne float",
+		"muddled mint",
+		"a twist of lemon",
+		"a squeeze of grapefruit juice",
+		"sprinkled annise seeds",
+		"a cold stare",
+		"bitters",
+		"an orange wedge",
+		"a couple olives",
+		"muddled blackberries",
+		"a shot of Makers Mark",
+		"a slice of lime and a salt rim"
+	],
+	"result": [
+	]
+}

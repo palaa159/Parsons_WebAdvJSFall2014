@@ -1,0 +1,250 @@
+$grey: #A9DDD9;
+$red: #EEBA4C;
+$green: #E3493B;
+$blue: #23B5AF;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	overflow: hidden;
+}
+
+// header sits on top of view
+header {
+	position: absolute;
+	top:0;
+	z-index: 1;
+	padding: 10px 0px 0px 20px;
+}
+
+footer {
+	position: absolute;
+	bottom: 10px;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+}
+
+// makes app full screen
+#view {
+	position: absolute;
+	z-index: 0;
+	top:0;
+	bottom:0;
+	width: 100%;
+	height: 100%;
+}
+
+.page, .overlayer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: $grey;
+	transform: translate3d(0, 0, 0);
+	transition: 0.35s;
+	padding: 20px;
+	overflow-y: scroll;
+}
+
+#p-inProgress {
+	background: $red;
+}
+
+#p-done {
+	background: $green;
+}
+
+#p-about {
+	background: $blue;
+}
+
+#o-create {
+	z-index: 9;
+	background: rgba(255,255,255,0.9);
+}
+
+// Transition trick
+// http://www.w3schools.com/css/css3_3dtransforms.asp
+.slideIn {
+	transform: translate3d(100%, 0%, 0);
+}
+
+.slideOut {
+	transform: translate3d(-30%, 0%, 0);
+	transition: 1s all;
+	opacity: 0.5;
+}
+
+.slideInFromBottom {
+	transform: translate3d(0, 100%, 0);
+}
+
+header .stuts span {
+    font-size:22px;
+    font-weight:bold;
+    margin-left:5px;
+}
+
+.content-main {
+    background-color: #FFFFFF;
+    // border: 1px solid #CCCCCC;
+    margin: 20px auto;
+    max-width: 1002px;
+    min-height: 500px;
+    min-width: 930px;
+    overflow: visible;
+    padding: 10px;
+    position: relative;
+}
+.content-body {
+    background: none repeat scroll 0 0 #EEEEEE;
+    margin: 0 0 15px;
+    padding: 10px 10px 5px;
+    position: relative;
+}
+.content-body h2 {
+    display: block;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 20px;
+}
+.content-body .content-body-inner {
+    border-bottom: 1px solid #E8E8E8;
+    min-height: 51px;
+    overflow: hidden;
+    padding: 9px 12px;
+    position: relative;
+}
+
+/* list of artists */
+.artist {
+    display: block;
+    float: left;
+    margin: 10px;
+    width: 128px;
+}
+.artist a {
+    text-decoration: none;
+}
+.artist b {
+    color: #1B1B1B;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* single artist info */
+.artist_info {
+    display: block;
+    margin: 10px;
+}
+.artist_info > a {
+    display: block;
+    float: left;
+    text-decoration: none;
+}
+.artist_info b {
+    color: #1B1B1B;
+    display: block;
+    font-size: 24px;
+    text-align: center;
+}
+.artist_info div {
+    color: #1B1B1B;
+    float: right;
+    font-size: 12px;
+    padding-top: 30px;
+    text-align: justify;
+    width: 630px;
+}
+
+/* list of tracks */
+.track {
+    display: block;
+    float: left;
+    margin: 9px;
+    width: 300px;
+}
+.track a {
+    text-decoration: none;
+    vertical-align: center;
+}
+.track img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.track b {
+    color: #1B1B1B;
+    font-size: 13px;
+}
+
+#link {
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 300px;
+}
+
+#link1 {
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    font-size: 20px;
+}
+
+#link2 {
+    position: absolute;
+    left: 100px;
+    top: 12px;
+    font-size: 20px;
+}
+
+#link3 {
+    position: absolute;
+    left: 180px;
+    top: 12px;
+    font-size: 20px;
+    
+}
+
+
+
+////////////////TAG/////////////////
+#genreContainer {
+	margin-top: 25px;
+	text-align: center;
+	font-size: 1.5em;
+	#genre, #genre:focus {
+		border: 0;
+		outline: 0;
+		margin: 0;
+		padding: 0px 5px 0px 10px;
+		height: 30px;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		color: #86d5d9;
+		width: 200px;
+		font-weight: 100;
+	}
+	#submit {
+		margin-left: -6px;
+		border: 0;
+		background: $fav;
+		color: #fff;
+		font-size: 0.8em;
+		height: 30px;
+		padding: 0px 15px 0px 15px;
+		vertical-align: top;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	#submit:focus {
+		outline: none;
+	}
+}
+///////////////////////////////////

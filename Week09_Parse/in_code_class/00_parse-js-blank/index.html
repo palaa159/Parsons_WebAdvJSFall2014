@@ -1,0 +1,152 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>My Parse App</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.1.min.js"></script>
+</head>
+
+<body>
+  
+  <div id="main">
+    <h1>You're ready to use Parse!</h1>
+
+    <p>Read the documentation and start building your JavaScript app:</p>
+
+    <ul>
+      <li><a href="https://www.parse.com/docs/js_guide">Parse JavaScript Guide</a></li>
+      <li><a href="https://www.parse.com/docs/js">Parse JavaScript API Documentation</a></li>
+    </ul>
+
+    <div style="display:none" class="error">
+      Looks like there was a problem saving the test object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
+    </div>
+
+    <div style="display:none" class="success">
+      <p>We've also just created your first object using the following code:</p>
+      
+        <code>
+          var TestObject = Parse.Object.extend("TestObject");<br/>
+          var testObject = new TestObject();<br/>
+          testObject.save({foo: "bar"});
+        </code>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    Parse.initialize("alk5lw49f6c9rXnnUZJ1qyu6OqTYOYbpY9TW2DGa", "1cWAicJ6Cg3j8qlu1xV1DgUR9m2OBOTnXnOvT8XA");
+    
+    // var TestObject = Parse.Object.extend("TBA_TABLE");
+    // var testObject = new TestObject();
+
+    //   testObject.save({favorite_food: ['Banana', 'Pad Thai']}, {
+    //   success: function(object) {
+    //     $(".success").show();
+    //   },
+    //   error: function(model, error) {
+    //     $(".error").show();
+    //   }
+    // });
+
+    var favoriteTVShow = Parse.Object.extend('favorite_tv_show');
+    var favoriteTVShow = new favoriteTVShow();
+
+    var query = new Parse.Query('favorite_tv_show');
+
+    // Data
+    var ourFirstEntry = {
+      title: 'Gotham',
+      year_start: 2014,
+      year_end: 2100,
+      genre: ['Superhero', 'Action', 'Drama'],
+      director: 'Bruce Wayne',
+      rating: {
+        IMDB: 8.0,
+        TMDB: 9.5
+      }
+    };
+
+    var create = function(data) {
+      favoriteTVShow.save(data, {
+        success: function() {
+          console.log('GOOD');
+        },
+        error: function() {
+          console.log('BAD');
+        }
+      });
+    };
+
+    // create(ourFirstEntry);
+
+    var dataContainer = [];
+
+    var read = function() {
+      // fetch all data in the table
+      // https://parse.com/docs/js_guide#queries-basic
+      // adding condition
+      // query.equalTo('title', 'Lost');
+      // query.greaterThanOrEqualTo
+      // query.limit(2);
+      query.find({
+        success: function(raw) {
+          // console.log(raw);
+          // iterate through the array "raw"
+          raw.forEach(function(item) {
+            // console.log(item.id, item.attributes);
+            dataContainer.push({
+              id: item.id,
+              data: item.attributes
+            });
+          });
+          // final result, stored in our variable
+          console.log(dataContainer);
+        },
+        error: function() {
+          console.log('BAD');
+        }
+      });
+    };
+
+    read();
+
+    var update = function(id, changedDirector) {
+      favoriteTVShow.save({
+        id: id,
+        director: changedDirector
+      });
+    };
+
+    // Because read() hasn't finished performing, we don't have the data contained in dataContainer YET.
+    setTimeout(function() {
+      update(findIdFromTitle('The Walking Dead'), 'Does not matter!');
+      // Give read() some time
+
+      // remove Lost
+      remove(findIdFromTitle('Arrow'));
+    }, 2000);
+
+    var remove = function(id) {
+      favoriteTVShow.id = id;
+      favoriteTVShow.destroy();
+    };
+
+    // helper
+    function findIdFromTitle(title) {
+      // dataContainer.forEach()
+      for(var i = 0; i < dataContainer.length; i++) {
+        if(dataContainer[i].data.title === title) {
+          return dataContainer[i].id;
+        }
+      }
+    }
+
+  </script>
+</body>
+
+</html>

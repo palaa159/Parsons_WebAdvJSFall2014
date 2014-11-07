@@ -1,0 +1,10 @@
+p{
+position:fixed;
+right:50%; 
+top:50px; 	
+color:#FF0000;
+letter-spacing:8px; 
+text-align:center;
+font-size:200%;
+font-weight:bold;
+}

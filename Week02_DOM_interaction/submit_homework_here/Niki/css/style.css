@@ -1,0 +1,25 @@
+/* your style begins here */
+#container {
+	background: #fff;
+	margin: 0 auto;
+	width: 80%;
+	font-size: 5em;
+	line-height: 1.3em;
+	padding-bottom: 30px;
+}
+
+#display {
+	background: #33204f;
+	color: #fff;
+	font-size: 4em;
+	line-height: 1.3em;
+	margin: 0 auto;
+	width: 80%;
+	text-decoration: none;
+
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+

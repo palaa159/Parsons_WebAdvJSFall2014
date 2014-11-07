@@ -1,0 +1,151 @@
+console.log ('Hello World');
+console.warn('This is a final warning');
+console.info('Some information');
+
+
+var myString ='this is a string';
+
+console.log(myString);
+// console.log(myOtherString);
+//concatination
+
+var myFirstString ='I am';
+var mySecondString = 'Apon';
+
+var joinedString = myFirstString + mySecondString;
+console.log(joinedString);
+
+var joinedString = myFirstString.concat(mySecondString);
+console.log(joinedString);
+
+// Number 
+
+// Integer data type
+
+var myInt = 32189784334;
+
+//converse string --> int with .parseint()
+var myFinalInt = parseInt(myInt);
+console.log(myInt);
+
+console.log(myInt);
+
+//escape a quote
+var someString = 'I\'m a burger';
+
+
+//Array
+// Its a moving box
+//it contains a collection of items 
+
+// var myArray= [1, 'Hamcheese', 0.889, ['Hey']];
+
+var myArray = [1,2,3];
+
+console.log('Printing: ' + myArray[0] + ' and ');
+console.log('the length of the array is: ');
+
+var emptyArray = [];
+
+//Adding items using .push()
+emptyArray.push('item 01');
+emptyArray.push('item 02');
+emptyArray.push('12345');
+emptyArray.push(['also an array']);
+
+emptyArray.splice(0,1);
+console.log(emptyArray);
+
+var indexToRemove = emptyArray.indexOf('item 02');
+console.log(emptyArray);
+
+//removing item 02
+emptyArray.splice(indexToRemove,1);
+console.log(emptyArray);
+
+//we can remove an item with the index number. but if we don't really know the index of that data, then we can find it
+//through .index of. you can content of the ite,. in this case 
+
+
+//Object
+//name: Apon
+//Age: 20
+//Origin: North Korea
+
+var myObject= {}; 
+myObject.name = 'Apon';
+myObject.age = 20;
+myObject.origin = 'N. Korea';
+
+console.log(myObject);
+
+var myOtherObject = {
+	name: 'Apon',
+	age:20,
+	origin: 'n.korea'
+};
+
+for(var i=0; i<10; i++) {
+	console.log('number: ' + i);
+}
+
+var superheroes = ['Batman', 'superman', 'spiderman' ];
+
+console.log(superheroes[0]);
+
+for (var k =0; k< superheroes.length; k++) {
+	console.log(superheroes [k] + 'is dead.');
+}
+
+
+var myFunction = function() {
+	console.log('i am a fucntion');
+
+};
+
+// myFunction(); = function(msg) {
+// 	console.log(msg);
+
+
+// };
+
+// myOtherFunction('hellow Universe');
+
+var c = function(msg) {
+	console.info(msg);
+
+};
+
+c('print something now!');
+
+var human = function(name, color, weight, height) {
+	//head, body, color, weight, height
+
+	this.name = name;
+	this.color = color;
+	this.weight = weight;
+	this.height = height;
+	this.walk = function() {
+		console.log (this.name + ' is walking');
+	};
+
+};
+
+var firstHuman = new Human('Apon', 'Purple', 65, 175);
+var secondHuman = new Human('Crystal', 'Yellow', 90, 150);
+
+secondHuman.walk();
+
+
+
+
+
+
+
+
+
+
+
+
+
+

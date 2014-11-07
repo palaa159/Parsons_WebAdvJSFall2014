@@ -1,0 +1,10 @@
+/* your style begins here */
+
+#container {
+	font: Helvetica;
+	font-size: 100px;
+	color: white;
+	height: 1000px;
+	width: 100%;
+	background-color: black;
+}

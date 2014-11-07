@@ -1,0 +1,27 @@
+{
+  "name": "PingPhone",
+  "version": "0.0.01",
+  "description": "Ping Phone",
+
+  "engines": {
+    "node": ">= 0.10.25",
+    "npm": ">= 1.3.24"
+  },
+
+  "dependencies": {
+    "express": "~3.0.0",
+      "ejs": "~0.7.1",
+      "socket.io": "~0.9.6"
+
+},
+
+  "scripts": {
+        "start": "node pingphone.js"
+},
+
+  "devDependencies": {},
+  "bundleDependencies": [],
+
+  "private": true,
+  "main": "server.js"
+}

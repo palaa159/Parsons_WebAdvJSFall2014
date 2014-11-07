@@ -1,0 +1,15 @@
+body {
+	background-color: black;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	margin-top: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+a {
+	color: #3DB8D4;
+	text-decoration: none;
+	font-size: 25px;
+}
